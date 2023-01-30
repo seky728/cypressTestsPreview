@@ -1,0 +1,11 @@
+{
+  "name": "e2e-tests",
+  "version": "1.0.0",
+  "description": "my cypress e2e tests",
+  "main": "index.js",
+  "author": "Lukas Secky (seky728)",
+  "license": "open",
+  "dependencies": {
+    "cypress": "^12.4.1"
+  }
+}
