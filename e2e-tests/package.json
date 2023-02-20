@@ -6,6 +6,23 @@
   "author": "Lukas Secky (seky728)",
   "license": "open",
   "dependencies": {
-    "cypress": "^12.4.1"
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.4",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^12.6.0",
+    "esbuild": "^0.17.10"
+  },
+  "scripts": {
+    "open": "cypress open -e TAGS='not @wip and not @skip'"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": [
+      "cypress/e2e/[filepath]/**/*.{js,ts}",
+      "cypress/e2e/[filepath].{js,ts}",
+      "cypress/support/step_definitions/**/*.{js,ts}",
+      "cypress/e2e/common/BDDsteps/*.ts"
+    ],
+    "filterSpecs": true,
+    "omitFiltered": true
   }
 }
